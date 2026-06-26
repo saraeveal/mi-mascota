@@ -68,7 +68,7 @@ console.log("Nombre:", mascota.nombre);
 console.log("Tipo:", mascota["tipo"]);
 
 //Etapa 2 · Método describir() y this
-console.log(mascota.describir());
+mascota.describir();
 
 //Etapa 3 · alimentar()
 mascota.alimentar();
