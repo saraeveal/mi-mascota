@@ -44,10 +44,21 @@ const mascota = {
         `${this.nombre} durmió 😴 — Energía: ${this.energia}`
     );
     },
+
+    verEstado() {
+        Object.entries(this)
+
+            .filter(([clave, valor]) =>
+                typeof valor === "number"
+            )
+
+            .forEach(([clave, valor]) =>
+                console.log(`${clave}: ${valor}`)
+            );
+    },
 };
 
 //Etapa 1 · Nace tu mascota
-
 //Notación punto
 console.log("Nombre:", mascota.nombre);
 //Notación corchete
@@ -63,3 +74,6 @@ mascota.alimentar();
 //Etapa 4 · jugar() y dormir()
 mascota.jugar();
 mascota.dormir();
+
+//Etapa 5 · verEstado()
+mascota.verEstado();
