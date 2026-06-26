@@ -77,3 +77,22 @@ mascota.dormir();
 
 //Etapa 5 · verEstado()
 mascota.verEstado();
+
+//Etapa 6 · Clon VIP + spread + destructuring
+const mascotaVIP = {
+    ...mascota,
+    accesorio: "corona 👑",
+    felicidad: 100
+};
+console.log(
+`VIP felicidad: ${mascotaVIP.felicidad} | accesorio: ${mascotaVIP.accesorio}`
+);
+
+console.log(
+`Original felicidad: ${mascota.felicidad}`
+);
+
+const { nombre, tipo } = mascota;
+console.log(
+`Mi mascota: ${nombre} (${tipo})`
+);
