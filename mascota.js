@@ -7,13 +7,13 @@ const mascota = {
     energia: 50,
 
     describir() {
-        return `${this.nombre} es un ${this.tipo}.`;
+        alert(`${this.nombre} es un ${this.tipo}.`);
     },
 
     alimentar() {
     this.hambre = Math.max(0, this.hambre - 20);
 
-    console.log(
+    alert(
         `${this.nombre} comió 🍖 — Hambre: ${this.hambre}`
     );
     },
@@ -29,7 +29,7 @@ const mascota = {
         this.energia - 15
     );
 
-    console.log(
+    alert(
         `${this.nombre} jugó 🎾 — Felicidad: ${this.felicidad}, Energía: ${this.energia}`
     );
     },
@@ -40,21 +40,24 @@ const mascota = {
         this.energia + 30
     );
 
-    console.log(
+    alert(
         `${this.nombre} durmió 😴 — Energía: ${this.energia}`
     );
     },
 
     verEstado() {
+        let estado = "";
         Object.entries(this)
 
             .filter(([clave, valor]) =>
                 typeof valor === "number"
             )
 
-            .forEach(([clave, valor]) =>
-                console.log(`${clave}: ${valor}`)
-            );
+            .forEach(([clave, valor]) =>{
+                estado += `${clave}: ${valor}\n`;
+            });
+            alert(estado)
+
     },
 };
 
@@ -96,3 +99,58 @@ const { nombre, tipo } = mascota;
 console.log(
 `Mi mascota: ${nombre} (${tipo})`
 );
+
+//🏆 Jefe Final · Menú do/while
+let opcion;
+
+do {
+
+opcion = prompt(
+`=== ${mascota.nombre} ===
+
+1) Alimentar 🍖
+2) Jugar 🎾
+3) Dormir 😴
+4) Ver estado 📋
+5) Salir
+
+Elige una opción:`
+);
+
+if (opcion === "1") {
+
+    mascota.alimentar();
+
+}
+
+else if (opcion === "2") {
+
+    mascota.jugar();
+
+}
+
+else if (opcion === "3") {
+
+    mascota.dormir();
+
+}
+
+else if (opcion === "4") {
+
+    mascota.verEstado();
+
+}
+
+else if (opcion === "5") {
+
+    alert(`¡Cuídate, ${mascota.nombre}! 👋`);
+
+}
+
+else {
+
+    alert("Opción inválida");
+
+}
+
+} while (opcion !== "5");
