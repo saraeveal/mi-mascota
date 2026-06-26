@@ -61,25 +61,26 @@ const mascota = {
     },
 };
 
-//Etapa 1 · Nace tu mascota
-//Notación punto
+/*Etapa 1 · Nace tu mascota
+Notación punto
 console.log("Nombre:", mascota.nombre);
-//Notación corchete
+Notación corchete
 console.log("Tipo:", mascota["tipo"]);
 
-//Etapa 2 · Método describir() y this
+Etapa 2 · Método describir() y this
 mascota.describir();
 
-//Etapa 3 · alimentar()
+Etapa 3 · alimentar()
 mascota.alimentar();
 mascota.alimentar();
 
-//Etapa 4 · jugar() y dormir()
+Etapa 4 · jugar() y dormir()
 mascota.jugar();
 mascota.dormir();
 
-//Etapa 5 · verEstado()
+Etapa 5 · verEstado()
 mascota.verEstado();
+*/
 
 //Etapa 6 · Clon VIP + spread + destructuring
 const mascotaVIP = {
